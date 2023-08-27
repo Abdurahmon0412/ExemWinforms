@@ -21,12 +21,16 @@ namespace WInforms.UserControllsFolder
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            Parent._clinikList.BringToFront();
+            //if agar Admin bulsa 
+                Parent._checkClinikListForAdmin.BringToFront();
+            //else  User bulsa: 
+                //Parent._clinikList.BringToFront();
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            Parent._registrationUserControl.BringToFront();
+            Parent._checkClinikListForAdmin.BringToFront();
         }
     }
 }

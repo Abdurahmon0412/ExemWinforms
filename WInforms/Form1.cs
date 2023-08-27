@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WInforms.AdmilnChance;
+using WInforms.AdmilnChance.ForClinika;
 using WInforms.Clinicas;
 using WInforms.Coasts;
 using WInforms.DoctorsPanel;
@@ -23,6 +25,10 @@ namespace WInforms
         public CheckClinik _checkClinik;
         public DoctorsListWindow _doctorsListWindow;
         public PricesUserControl _priceUserControl;
+        public ClinikListForAdmin _clinikListForAdmin;
+        public CheckClinikListForAdmin _checkClinikListForAdmin;
+        public EditClinik _editClinik;
+        public AddClinika _addClinik;
         public Form1()
         {
 
@@ -33,6 +39,12 @@ namespace WInforms
             _checkClinik = new CheckClinik(this);
             _doctorsListWindow = new DoctorsListWindow(this);
             _priceUserControl = new PricesUserControl(this);
+            _clinikListForAdmin = new ClinikListForAdmin(this);
+            _checkClinikListForAdmin = new CheckClinikListForAdmin(this);
+            _editClinik = new EditClinik(this);
+            _addClinik = new AddClinika(this);
+
+
 
             Controls.Add(_clinikList);
             Controls.Add(_enterorLoginUserControl);
@@ -41,6 +53,10 @@ namespace WInforms
             Controls.Add(_checkClinik);
             Controls.Add(_doctorsListWindow);
             Controls.Add(_priceUserControl);
+            Controls.Add(_clinikListForAdmin);
+            Controls.Add(_checkClinikListForAdmin);
+            Controls.Add(_editClinik);
+            Controls.Add(_addClinik);
             InitializeComponent();
         }
 

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//using Backend.Model;
 namespace WInforms.DoctorsPanel
 {
     public partial class DoctorsListWindow : UserControl

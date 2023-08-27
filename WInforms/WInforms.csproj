@@ -46,16 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clinicas\CheckClinik.cs">
+    <Compile Include="AdmilnChance\ForClinika\AddClinika.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Clinicas\CheckClinik.Designer.cs">
+    <Compile Include="AdmilnChance\ForClinika\AddClinika.Designer.cs">
+      <DependentUpon>AddClinika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForClinika\CheckClinikListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForClinika\CheckClinikListForAdmin.Designer.cs">
+      <DependentUpon>CheckClinikListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForClinika\ClinikListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForClinika\ClinikListForAdmin.Designer.cs">
+      <DependentUpon>ClinikListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForClinika\EditClinik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForClinika\EditClinik.Designer.cs">
+      <DependentUpon>EditClinik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicasForUser\CheckClinik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClinicasForUser\CheckClinik.Designer.cs">
       <DependentUpon>CheckClinik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clinicas\ClinikList.cs">
+    <Compile Include="ClinicasForUser\ClinikList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Clinicas\ClinikList.Designer.cs">
+    <Compile Include="ClinicasForUser\ClinikList.Designer.cs">
       <DependentUpon>ClinikList.cs</DependentUpon>
     </Compile>
     <Compile Include="Coasts\PricesUserControl.cs">
@@ -96,10 +120,22 @@
     <Compile Include="UserControllsFolder\SignInButton.Designer.cs">
       <DependentUpon>SignInButton.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Clinicas\CheckClinik.resx">
+    <EmbeddedResource Include="AdmilnChance\ForClinika\AddClinika.resx">
+      <DependentUpon>AddClinika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForClinika\CheckClinikListForAdmin.resx">
+      <DependentUpon>CheckClinikListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForClinika\ClinikListForAdmin.resx">
+      <DependentUpon>ClinikListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForClinika\EditClinik.resx">
+      <DependentUpon>EditClinik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClinicasForUser\CheckClinik.resx">
       <DependentUpon>CheckClinik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clinicas\ClinikList.resx">
+    <EmbeddedResource Include="ClinicasForUser\ClinikList.resx">
       <DependentUpon>ClinikList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coasts\PricesUserControl.resx">
@@ -147,10 +183,11 @@
     <None Include="Resources\ClinikPicture.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AdmilnChance\" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Folder Include="AdmilnChance\ForDoctors\" />
+    <Folder Include="AdmilnChance\ForServices\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
