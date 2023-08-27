@@ -1,0 +1,9 @@
+create table MedService 
+(
+	id serial primary key not null,
+	medservice_name varchar(50) not null,
+	service_price decimal not null,
+	clinika_id int not null,
+	
+	constraint fk_clinika_id foreign key (clinika_id) references Clinika(id)
+);

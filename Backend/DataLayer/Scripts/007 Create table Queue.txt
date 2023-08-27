@@ -1,0 +1,11 @@
+create table ClinikQueue 
+(
+	id serial primary key not null,
+	dataofcreate date not null,
+	iscomplate bool not null,
+	person_id int not null,
+	doctor_id int not null,
+	
+	constraint fk_person_id foreign key (person_id) references Person(id),
+	constraint fk_doctor_id foreign key (doctor_id) references Doctor(id)
+);

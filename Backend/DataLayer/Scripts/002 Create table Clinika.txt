@@ -1,0 +1,13 @@
+create table Clinika (
+	id serial primary key not null,
+	fullname varchar(50) not null,
+	address varchar(100),
+	phone_number varchar(14)
+);
+
+insert into Clinika(fullname,address, phone_number)
+values ('MedPlus', 'Navoiy shahar', '+998938399777'),
+	   ('Darmon', 'Toshkent shahar', '+998938399777'),
+	   ('ShifoMed', 'Samarqand shahar', '+998938399877'),
+	   ('GuanJou', 'Kattaqorgon shahar', '+998938399778'),
+	   ('Hayot', 'Buxoro shahar', '+998948399777');

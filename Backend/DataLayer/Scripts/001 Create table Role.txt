@@ -1,0 +1,8 @@
+create table Role 
+(
+	id serial primary key not null,
+	role_name varchar(10) not null
+);
+
+insert into Role(role_name)
+values ('admin'),('user'),('doctor');

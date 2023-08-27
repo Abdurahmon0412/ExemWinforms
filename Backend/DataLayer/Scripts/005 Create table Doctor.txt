@@ -1,0 +1,15 @@
+create table Doctor
+(
+	id serial primary key not null,
+	doctor_name varchar (25) not null,
+	start_time date not null,
+	end_time date not null,
+	floor_place int not null,
+	room_place int not null,
+	experience int not null,
+	person_id int not null,
+	medservice_id int not null,
+	
+	constraint fk_person_id foreign key (person_id) references Person(id),
+	constraint fk_medservice_id foreign key (medservice_id) references MedService(id)
+);
