@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="DataLayer\Scripts\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 
   <ItemGroup>

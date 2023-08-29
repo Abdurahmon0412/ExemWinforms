@@ -46,6 +46,7 @@
             this.EditNameLabel.Size = new System.Drawing.Size(102, 25);
             this.EditNameLabel.TabIndex = 1;
             this.EditNameLabel.Text = "Edit Name";
+            this.EditNameLabel.Click += new System.EventHandler(this.EditNameLabel_Click);
             // 
             // ChangeCallSenter
             // 
@@ -55,6 +56,7 @@
             this.ChangeCallSenter.Name = "ChangeCallSenter";
             this.ChangeCallSenter.Size = new System.Drawing.Size(182, 37);
             this.ChangeCallSenter.TabIndex = 2;
+            this.ChangeCallSenter.TextChanged += new System.EventHandler(this.ChangeCallSenter_TextChanged);
             // 
             // ConfirmName
             // 
@@ -65,6 +67,7 @@
             this.ConfirmName.TabIndex = 4;
             this.ConfirmName.Text = "Confirm";
             this.ConfirmName.UseVisualStyleBackColor = false;
+            this.ConfirmName.Click += new System.EventHandler(this.ConfirmName_Click);
             // 
             // ConfirmCall
             // 
@@ -75,6 +78,7 @@
             this.ConfirmCall.TabIndex = 5;
             this.ConfirmCall.Text = "Confirm";
             this.ConfirmCall.UseVisualStyleBackColor = false;
+            this.ConfirmCall.Click += new System.EventHandler(this.ConfirmCall_Click);
             // 
             // OKButton
             // 
@@ -97,6 +101,7 @@
             this.EditPhoneNumberLabel.Size = new System.Drawing.Size(178, 25);
             this.EditPhoneNumberLabel.TabIndex = 7;
             this.EditPhoneNumberLabel.Text = "Edit Phone number";
+            this.EditPhoneNumberLabel.Click += new System.EventHandler(this.EditPhoneNumberLabel_Click);
             // 
             // ChangeName
             // 
@@ -106,6 +111,7 @@
             this.ChangeName.Name = "ChangeName";
             this.ChangeName.Size = new System.Drawing.Size(182, 37);
             this.ChangeName.TabIndex = 8;
+            this.ChangeName.TextChanged += new System.EventHandler(this.ChangeName_TextChanged);
             // 
             // EditClinik
             // 

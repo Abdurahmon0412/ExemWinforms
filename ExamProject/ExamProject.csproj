@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AdmilnChance\CheckClinikListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForClinika\AddClinika.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForClinika\ClinikListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForClinika\EditClinik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForDoctors\AddDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForDoctors\DoctorListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForDoctors\DoctorTypesforAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForDoctors\EditDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForServices\AddService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForServices\EditService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdmilnChance\ForServices\TypesService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ClinicasForUser\CheckClinik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ClinicasForUser\ClinikList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Coasts\PricesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DoctorsPanel\DoctorsListWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="UserControllsFolder\EnterORLoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControllsFolder\RegistrationUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControllsFolder\SignInButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

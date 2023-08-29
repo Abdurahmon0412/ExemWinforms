@@ -26,12 +26,12 @@ namespace WInforms.AdmilnChance
 
         private void DoctorsButton_Click(object sender, EventArgs e)
         {
-
+            Parent._doctorTypesforAdmin.BringToFront();
         }
 
         private void ServicesButton_Click(object sender, EventArgs e)
         {
-
+            Parent._typesService.BringToFront();
         }
 
         private void BackButton_Click(object sender, EventArgs e)

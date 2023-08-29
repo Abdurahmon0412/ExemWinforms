@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Backend.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WInforms.UserControllsFolder;
 
 namespace WInforms
 {
@@ -15,7 +17,6 @@ namespace WInforms
         [STAThread]
         static void Main()
         {
-            //var context = new EfCoreContext();
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

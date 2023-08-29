@@ -14,14 +14,39 @@ namespace Backend.ServiceLayer.AccountService
         {
             _context = context;
         }
-        public bool Registrate(Person person)
+
+        public Person Registrate(Person person)
         {
-            throw new NotImplementedException();
+            return person;
         }
 
-        public bool SignIn(Person person)
+        public  Person?  SignIn(string login, string password )
         {
-            throw new NotImplementedException();
+
+
+            var a = _context.People.FirstOrDefault(item =>
+            login == item.Login
+            && item.Password == password);
+            return a;
         }
+
+        public List<Clinika> GetAllCliniks(string clinikname)
+        {
+            return _context.Clinikas.ToList();
+        }
+
+        public int GetClinikId(string clinikname)
+        {
+            var selected = _context.Clinikas.FirstOrDefault(item => item.Fullname == clinikname);
+            if(selected == null)
+                return 0;
+            return selected.Id;
+        }
+        public void AddPerson(Person person)
+        {
+            _context.People.Add(person);
+            _context.SaveChanges();
+        }
+
     }
 }

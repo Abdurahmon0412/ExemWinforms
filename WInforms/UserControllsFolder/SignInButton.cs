@@ -7,30 +7,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Backend;
+using Backend.DataLayer;
+using Backend.ServiceLayer;
+using Backend.ServiceLayer.AccountService;
 
 namespace WInforms.UserControllsFolder
 {
     public partial class SignInButton : UserControl
     {
         public Form1 Parent;
-        public SignInButton(Form1 parent)
+        private readonly IAccountService _accountService;
+        public SignInButton(Form1 parent, IAccountService accountService)
         {
             Parent = parent;
+            _accountService = accountService;
             InitializeComponent();
+            
         }
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            //if agar Admin bulsa 
+            var findperson = _accountService.SignIn(textBox1.Text.ToString(), textBox2.Text.ToString());
+            if (findperson != null && findperson.RoleId == 1)
                 Parent._checkClinikListForAdmin.BringToFront();
-            //else  User bulsa: 
-                //Parent._clinikList.BringToFront();
+            if(findperson != null && findperson.RoleId == 2)
+                Parent._clinikList.BringToFront();
+            else 
+                Parent._registrationUserControl.BringToFront();
+
+
+
+            //try
+            //{
+            //    EfCoreContext efCoreContext = new EfCoreContext();
+            //    AccountService service = new AccountService(efCoreContext);
+            //    var findperson = service.SignIn(textBox1.Text.ToString(), textBox2.Text.ToString());
+
+            //    if (findperson != null && findperson.RoleId == 1)
+            //    {
+            //        Parent._checkClinikListForAdmin.BringToFront();
+            //    }
+            //    else if (findperson != null && findperson.RoleId == 2)
+            //    {
+            //        Parent._clinikList.BringToFront();
+            //    }
+            //    else
+            //        Parent._registrationUserControl.BringToFront();
+
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    MessageBox.Show(ex.Message);
+            //}
+
+
 
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             Parent._checkClinikListForAdmin.BringToFront();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

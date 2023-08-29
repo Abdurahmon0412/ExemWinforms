@@ -26,5 +26,35 @@ namespace WInforms.AdmilnChance
         {
             Parent._checkClinikListForAdmin.BringToFront();
         }
+
+        private void EditPhoneNumberLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmCall_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeCallSenter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

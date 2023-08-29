@@ -43,7 +43,7 @@
             this.ClinikListDataGrid.Name = "ClinikListDataGrid";
             this.ClinikListDataGrid.RowHeadersWidth = 51;
             this.ClinikListDataGrid.RowTemplate.Height = 24;
-            this.ClinikListDataGrid.Size = new System.Drawing.Size(718, 452);
+            this.ClinikListDataGrid.Size = new System.Drawing.Size(724, 452);
             this.ClinikListDataGrid.TabIndex = 0;
             // 
             // EditClinikButton

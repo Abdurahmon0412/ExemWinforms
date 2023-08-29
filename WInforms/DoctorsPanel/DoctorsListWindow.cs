@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,7 +51,7 @@ namespace WInforms.DoctorsPanel
             table.Rows.Add(3, "omil");
 
 
-            //List<Doctor> doctors;
+            List<Doctor> doctors;
             List<string> list = new List<string> { "skdal", "dslkjadl", "ddsaakl"};
             var i = 4;
             foreach(var s in list)

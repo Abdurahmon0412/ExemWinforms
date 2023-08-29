@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Backend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Backend\bin\Debug\net7.0\Backend.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,10 +56,10 @@
     <Compile Include="AdmilnChance\ForClinika\AddClinika.Designer.cs">
       <DependentUpon>AddClinika.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdmilnChance\ForClinika\CheckClinikListForAdmin.cs">
+    <Compile Include="AdmilnChance\CheckClinikListForAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdmilnChance\ForClinika\CheckClinikListForAdmin.Designer.cs">
+    <Compile Include="AdmilnChance\CheckClinikListForAdmin.Designer.cs">
       <DependentUpon>CheckClinikListForAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="AdmilnChance\ForClinika\ClinikListForAdmin.cs">
@@ -69,6 +73,48 @@
     </Compile>
     <Compile Include="AdmilnChance\ForClinika\EditClinik.Designer.cs">
       <DependentUpon>EditClinik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\AddDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\AddDoctor.Designer.cs">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\DoctorListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\DoctorListForAdmin.Designer.cs">
+      <DependentUpon>DoctorListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\DoctorTypesforAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\DoctorTypesforAdmin.Designer.cs">
+      <DependentUpon>DoctorTypesforAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\EditDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForDoctors\EditDoctor.Designer.cs">
+      <DependentUpon>EditDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForServices\AddService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForServices\AddService.Designer.cs">
+      <DependentUpon>AddService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForServices\EditService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForServices\EditService.Designer.cs">
+      <DependentUpon>EditService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmilnChance\ForServices\TypesService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmilnChance\ForServices\TypesService.Designer.cs">
+      <DependentUpon>TypesService.cs</DependentUpon>
     </Compile>
     <Compile Include="ClinicasForUser\CheckClinik.cs">
       <SubType>UserControl</SubType>
@@ -93,6 +139,12 @@
     </Compile>
     <Compile Include="DoctorsPanel\DoctorsListWindow.Designer.cs">
       <DependentUpon>DoctorsListWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExeptionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExeptionUserControl.Designer.cs">
+      <DependentUpon>ExeptionUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -123,7 +175,7 @@
     <EmbeddedResource Include="AdmilnChance\ForClinika\AddClinika.resx">
       <DependentUpon>AddClinika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdmilnChance\ForClinika\CheckClinikListForAdmin.resx">
+    <EmbeddedResource Include="AdmilnChance\CheckClinikListForAdmin.resx">
       <DependentUpon>CheckClinikListForAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdmilnChance\ForClinika\ClinikListForAdmin.resx">
@@ -131,6 +183,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdmilnChance\ForClinika\EditClinik.resx">
       <DependentUpon>EditClinik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForDoctors\AddDoctor.resx">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForDoctors\DoctorListForAdmin.resx">
+      <DependentUpon>DoctorListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForDoctors\DoctorTypesforAdmin.dje.resx">
+      <DependentUpon>DoctorTypesforAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForDoctors\DoctorTypesforAdmin.resx">
+      <DependentUpon>DoctorTypesforAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForDoctors\EditDoctor.resx">
+      <DependentUpon>EditDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForServices\AddService.resx">
+      <DependentUpon>AddService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForServices\EditService.resx">
+      <DependentUpon>EditService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmilnChance\ForServices\TypesService.resx">
+      <DependentUpon>TypesService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClinicasForUser\CheckClinik.resx">
       <DependentUpon>CheckClinik.cs</DependentUpon>
@@ -143,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorsPanel\DoctorsListWindow.resx">
       <DependentUpon>DoctorsListWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExeptionUserControl.resx">
+      <DependentUpon>ExeptionUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -185,9 +264,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdmilnChance\ForDoctors\" />
-    <Folder Include="AdmilnChance\ForServices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
