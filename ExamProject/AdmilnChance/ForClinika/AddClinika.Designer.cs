@@ -121,7 +121,7 @@
             OKButton.Name = "OKButton";
             OKButton.Size = new Size(75, 71);
             OKButton.TabIndex = 9;
-            OKButton.Text = "OK";
+            OKButton.Text = "Exit";
             OKButton.UseVisualStyleBackColor = false;
             OKButton.Click += OKButton_Click;
             // 

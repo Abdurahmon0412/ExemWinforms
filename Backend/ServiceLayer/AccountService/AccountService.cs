@@ -30,14 +30,14 @@ namespace Backend.ServiceLayer.AccountService
             return a;
         }
 
-        public List<Clinika> GetAllCliniks(string clinikname)
+        public List<Clinika>? GetAllCliniks(string clinikname)
         {
-            return _context.Clinikas.ToList();
+            return  _context.Clinikass.ToList();
         }
 
         public int GetClinikId(string clinikname)
         {
-            var selected = _context.Clinikas.FirstOrDefault(item => item.Fullname == clinikname);
+            var selected = _context.Clinikass.FirstOrDefault(item => item.Fullname == clinikname);
             if(selected == null)
                 return 0;
             return selected.Id;
@@ -48,5 +48,12 @@ namespace Backend.ServiceLayer.AccountService
             _context.SaveChanges();
         }
 
+        public int GetPersonId(string login, string password)
+        {
+            var result = _context.People.FirstOrDefault(item => item.Login == login && item.Password.Equals(password));
+            if (result == null)
+                return 0;
+            return result.Id;
+        }
     }
 }

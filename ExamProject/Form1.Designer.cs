@@ -36,7 +36,7 @@
             MainPanel.BackColor = SystemColors.ButtonShadow;
             MainPanel.Location = new Point(0, 0);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(803, 547);
+            MainPanel.Size = new Size(786, 501);
             MainPanel.TabIndex = 0;
             MainPanel.Paint += MainPanel_Paint;
             // 
@@ -44,7 +44,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(785, 500);
+            ClientSize = new Size(785, 501);
             Controls.Add(MainPanel);
             Name = "Form1";
             Text = "Clinika";

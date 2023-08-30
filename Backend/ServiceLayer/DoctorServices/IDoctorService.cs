@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Backend.ServiceLayer.SeeDoctors
 {
-    internal class DoctorService
+    public interface IDoctorService
     {
+        List<Doctor> GetAllDoctors(int clinik_id);
+
+        Medservice GetMedservices(int doctor_id);
     }
 }

@@ -38,20 +38,21 @@
             // 
             // ClinikListDataGrid
             // 
-            ClinikListDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ClinikListDataGrid.ColumnHeadersHeight = 29;
             ClinikListDataGrid.Location = new Point(3, 0);
             ClinikListDataGrid.Margin = new Padding(3, 4, 3, 4);
             ClinikListDataGrid.Name = "ClinikListDataGrid";
             ClinikListDataGrid.RowHeadersWidth = 51;
             ClinikListDataGrid.RowTemplate.Height = 24;
-            ClinikListDataGrid.Size = new Size(724, 547);
+            ClinikListDataGrid.Size = new Size(716, 479);
             ClinikListDataGrid.TabIndex = 0;
+            ClinikListDataGrid.CellContentClick += ClinikListDataGrid_CellContentClick;
             // 
             // EditClinikButton
             // 
             EditClinikButton.BackColor = Color.SteelBlue;
             EditClinikButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            EditClinikButton.Location = new Point(724, 129);
+            EditClinikButton.Location = new Point(714, 129);
             EditClinikButton.Margin = new Padding(3, 4, 3, 4);
             EditClinikButton.Name = "EditClinikButton";
             EditClinikButton.Size = new Size(79, 141);
@@ -65,7 +66,7 @@
             DeleteCLinikButton.BackColor = Color.Red;
             DeleteCLinikButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             DeleteCLinikButton.ForeColor = Color.Black;
-            DeleteCLinikButton.Location = new Point(724, 0);
+            DeleteCLinikButton.Location = new Point(714, 0);
             DeleteCLinikButton.Margin = new Padding(3, 4, 3, 4);
             DeleteCLinikButton.Name = "DeleteCLinikButton";
             DeleteCLinikButton.Size = new Size(79, 133);
@@ -78,7 +79,7 @@
             // 
             AddClinikButton.BackColor = Color.SeaGreen;
             AddClinikButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AddClinikButton.Location = new Point(724, 268);
+            AddClinikButton.Location = new Point(714, 266);
             AddClinikButton.Margin = new Padding(3, 4, 3, 4);
             AddClinikButton.Name = "AddClinikButton";
             AddClinikButton.Size = new Size(79, 139);
@@ -91,10 +92,10 @@
             // 
             Back.BackColor = Color.Gray;
             Back.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Back.Location = new Point(724, 401);
+            Back.Location = new Point(717, 400);
             Back.Margin = new Padding(3, 4, 3, 4);
             Back.Name = "Back";
-            Back.Size = new Size(79, 146);
+            Back.Size = new Size(79, 136);
             Back.TabIndex = 4;
             Back.Text = "Back";
             Back.UseVisualStyleBackColor = false;
@@ -112,7 +113,7 @@
             Controls.Add(ClinikListDataGrid);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ClinikListForAdmin";
-            Size = new Size(803, 547);
+            Size = new Size(796, 536);
             ((System.ComponentModel.ISupportInitialize)ClinikListDataGrid).EndInit();
             ResumeLayout(false);
         }

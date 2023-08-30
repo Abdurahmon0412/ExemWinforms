@@ -1,5 +1,7 @@
 using Backend.DataLayer;
 using Backend.ServiceLayer.AccountService;
+using Backend.ServiceLayer.ClinikManagmetService;
+using Backend.ServiceLayer.SeeDoctors;
 using WInforms.AdmilnChance;
 using WInforms.AdmilnChance.ForClinika;
 using WInforms.AdmilnChance.ForDoctors;
@@ -16,6 +18,8 @@ namespace ExamProject
         static EfCoreContext _context = new EfCoreContext();
 
         IAccountService _accountService = new AccountService(_context);
+        ICLinikManagement _clinikManagement = new ClinikManagement(_context);
+        IDoctorService _doctorservice = new DoctorService(_context);
 
         public ClinikList _clinikList;
         public EnterORLoginUserControl _enterorLoginUserControl;
@@ -42,12 +46,12 @@ namespace ExamProject
             _registrationUserControl = new RegistrationUserControl(this, _accountService);
             _signInButton = new SignInButton(this, _accountService);
             _checkClinik = new CheckClinik(this);
-            _doctorsListWindow = new DoctorsListWindow(this);
+            _doctorsListWindow = new DoctorsListWindow(this, _doctorservice);
             _priceUserControl = new PricesUserControl(this);
-            _clinikListForAdmin = new ClinikListForAdmin(this);
+            _clinikListForAdmin = new ClinikListForAdmin(this, _clinikManagement);
             _checkClinikListForAdmin = new CheckClinikListForAdmin(this);
-            _editClinik = new EditClinik(this);
-            _addClinik = new AddClinika(this);
+            _editClinik = new EditClinik(this, _clinikManagement);
+            _addClinik = new AddClinika(this, _clinikManagement);
             _doctorTypesforAdmin = new DoctorTypesforAdmin(this);
             _doctorListForAdmin = new DoctorListForAdmin(this);
             _editDoctor = new EditDoctor(this);

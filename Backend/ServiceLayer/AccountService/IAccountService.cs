@@ -10,9 +10,11 @@ namespace Backend.ServiceLayer.AccountService
     {
         Person Registrate(Person person);
         Person? SignIn(string login,string password);
-        List<Clinika> GetAllCliniks(string clinikname);
+        List<Clinika>? GetAllCliniks(string clinikname);
         int GetClinikId(string clinikname);
         void AddPerson(Person person);
+
+        int GetPersonId(string login, string password);
 
     }
 }

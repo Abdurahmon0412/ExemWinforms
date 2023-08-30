@@ -29,47 +29,29 @@ namespace WInforms.UserControllsFolder
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            var findperson = _accountService.SignIn(textBox1.Text.ToString(), textBox2.Text.ToString());
+            var findperson = _accountService.SignIn(textBox1.Text, textBox2.Text);
             if (findperson != null && findperson.RoleId == 1)
             {
+                TextBoxChanged();
                 Parent._checkClinikListForAdmin.BringToFront();
             }
             else if (findperson != null && findperson.RoleId == 2)
             {
+                TextBoxChanged();
                 Parent._clinikList.BringToFront();
+                Parent._registrationUserControl.LastPersons.Push(findperson.Id);
             }
             else
             {
+                TextBoxChanged();
                 Parent._registrationUserControl.BringToFront();
             }
+        }
 
-
-            //try
-            //{
-            //    EfCoreContext efCoreContext = new EfCoreContext();
-            //    AccountService service = new AccountService(efCoreContext);
-            //    var findperson = service.SignIn(textBox1.Text.ToString(), textBox2.Text.ToString());
-
-            //    if (findperson != null && findperson.RoleId == 1)
-            //    {
-            //        Parent._checkClinikListForAdmin.BringToFront();
-            //    }
-            //    else if (findperson != null && findperson.RoleId == 2)
-            //    {
-            //        Parent._clinikList.BringToFront();
-            //    }
-            //    else
-            //        Parent._registrationUserControl.BringToFront();
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
-
-
-
+        private void TextBoxChanged()
+        {
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
         }
 
         private void BackButton_Click(object sender, EventArgs e)

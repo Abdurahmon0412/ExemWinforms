@@ -25,6 +25,7 @@ namespace WInforms.Clinicas
         private void DoctorsButton_Click(object sender, EventArgs e)
         {
             Parent._doctorsListWindow.BringToFront();
+            Parent._doctorsListWindow.ShowDatagridForDoctors();
 
         }
 

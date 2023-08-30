@@ -39,5 +39,10 @@ namespace WInforms.UserControllsFolder
         {
             Parent._registrationUserControl.BringToFront();
         }
+
+        private void EnterORLoginUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
