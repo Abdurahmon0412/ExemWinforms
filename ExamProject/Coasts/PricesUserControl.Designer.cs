@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PricesUserControl));
             BackButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            MedServiceDataGrid = new DataGridView();
+            ServicePicture = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)MedServiceDataGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ServicePicture).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 54);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(803, 547);
-            dataGridView1.TabIndex = 0;
             // 
             // BackButton
             // 
@@ -57,22 +49,49 @@
             BackButton.UseVisualStyleBackColor = false;
             BackButton.Click += BackButton_Click;
             // 
+            // MedServiceDataGrid
+            // 
+            MedServiceDataGrid.BackgroundColor = Color.FromArgb(192, 64, 0);
+            MedServiceDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MedServiceDataGrid.Location = new Point(88, 3);
+            MedServiceDataGrid.Name = "MedServiceDataGrid";
+            MedServiceDataGrid.RowHeadersWidth = 51;
+            MedServiceDataGrid.RowTemplate.Height = 29;
+            MedServiceDataGrid.Size = new Size(369, 541);
+            MedServiceDataGrid.TabIndex = 3;
+            MedServiceDataGrid.CellContentClick += MedServiceDataGrid_CellContentClick;
+            // 
+            // ServicePicture
+            // 
+            ServicePicture.ErrorImage = ExamProject.Properties.Resources.ClinikPicture;
+            ServicePicture.Image = ExamProject.Properties.Resources.ClinikPicture;
+            ServicePicture.InitialImage = (Image)resources.GetObject("ServicePicture.InitialImage");
+            ServicePicture.Location = new Point(463, 3);
+            ServicePicture.Name = "ServicePicture";
+            ServicePicture.Size = new Size(337, 559);
+            ServicePicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            ServicePicture.TabIndex = 4;
+            ServicePicture.TabStop = false;
+            // 
             // PricesUserControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 128, 0);
+            Controls.Add(ServicePicture);
+            Controls.Add(MedServiceDataGrid);
             Controls.Add(BackButton);
-            Controls.Add(dataGridView1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "PricesUserControl";
             Size = new Size(803, 565);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MedServiceDataGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ServicePicture).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Button BackButton;
+        private DataGridView MedServiceDataGrid;
+        private PictureBox ServicePicture;
     }
 }

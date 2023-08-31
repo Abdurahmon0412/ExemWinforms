@@ -64,6 +64,7 @@
             ServicesButton.TabIndex = 1;
             ServicesButton.Text = "Services";
             ServicesButton.UseVisualStyleBackColor = false;
+            ServicesButton.Click += ServicesButton_Click;
             // 
             // CoastsButton
             // 
@@ -134,7 +135,7 @@
             pictureBox1.Location = new Point(321, 0);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(482, 561);
+            pictureBox1.Size = new Size(482, 543);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;

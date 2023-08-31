@@ -124,5 +124,9 @@ namespace WInforms.AdmilnChance
 
         }
 
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Parent._checkClinikListForAdmin.BringToFront();
+        }
     }
 }

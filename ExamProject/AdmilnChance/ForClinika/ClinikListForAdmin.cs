@@ -58,6 +58,7 @@ namespace WInforms.AdmilnChance
             ClinikListDataGrid.AutoGenerateColumns = true;
             ClinikListDataGrid.ReadOnly = true;
             Parent._editClinik.BringToFront();
+            ShowDatagridForClinik();
         }
 
         private void AddClinikButton_Click(object sender, EventArgs e)
@@ -68,8 +69,8 @@ namespace WInforms.AdmilnChance
 
         private void Back_Click(object sender, EventArgs e)
         {
+            ShowDatagridForClinik();
             Parent._checkClinikListForAdmin.BringToFront();
-
 
         }
 
@@ -83,14 +84,14 @@ namespace WInforms.AdmilnChance
         }
         public void ShowDatagridForClinik()
         {
-
             DataTable table = new DataTable();
+
             table.Columns.Add("Id", typeof(int));
             table.Columns.Add("FullName", typeof(string));
             table.Columns.Add("Address", typeof(string));
             table.Columns.Add("PhoneNumber", typeof(string));
             table.Columns.Add("Descriptions", typeof(string));
-            var a = GetCliniks();
+           // var a = GetCliniks();
             if (GetCliniks() != null)
             {
                 foreach (var item in GetCliniks())

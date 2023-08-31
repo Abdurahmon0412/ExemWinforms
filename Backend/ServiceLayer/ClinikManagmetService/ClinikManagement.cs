@@ -17,7 +17,7 @@ namespace Backend.ServiceLayer.ClinikManagmetService
 
         public List<Clinika> GetClinikas()
         {
-                 return _context.Clinikass.ToList();
+            return _context.Clinikass.ToList();
         }
 
         public bool EditClinikas(Clinika clinika)

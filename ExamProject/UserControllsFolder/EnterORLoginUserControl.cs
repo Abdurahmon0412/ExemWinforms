@@ -27,6 +27,7 @@ namespace WInforms.UserControllsFolder
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
+            Parent._registrationUserControl.LastPersons.Push(0);
             Parent._clinikList.BringToFront();
         }
 

@@ -1,5 +1,6 @@
 ﻿using Backend;
 using Backend.DataLayer;
+using Backend.ServiceLayer.MedServiceServices;
 using Backend.ServiceLayer.SeeDoctors;
 using ExamProject;
 using System;
@@ -17,8 +18,8 @@ namespace WInforms.DoctorsPanel
     public partial class DoctorsListWindow : UserControl
     {
         public Form1 Parent;
-        private IDoctorService _doctorService;
-        public DoctorsListWindow(Form1 parent, IDoctorService doctorservice)
+        private IMedService _doctorService;
+        public DoctorsListWindow(Form1 parent, IMedService doctorservice)
         {
             _doctorService = doctorservice;
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace WInforms.DoctorsPanel
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            ShowDatagridForDoctors();
         }
 
 
@@ -39,37 +40,7 @@ namespace WInforms.DoctorsPanel
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-
-            DataTable table = new DataTable();
-            table.Columns.Add("Id", typeof(int));
-            table.Columns.Add("Name", typeof(string));
-            table.Columns.Add("Spetificik", typeof(string));
-            table.Columns.Add("Start/End time", typeof(string));
-            table.Columns.Add("WorkDays", typeof(string));
-            table.Columns.Add("Floor", typeof(int));
-            table.Columns.Add("Room", typeof(int));
-            table.Columns.Add("Graduate", typeof(int));
-
-
-            table.Rows.Add(1, "Ganisher", "uchuvchi");
-            table.Rows.Add(2, "qodir");
-            table.Rows.Add(3, "omil");
-
-
-            List<Doctor> doctors;
-            List<string> list = new List<string> { "skdal", "dslkjadl", "ddsaakl" };
-            var i = 4;
-            foreach (var s in list)
-            {
-                table.Rows.Add(i, s);
-                i++;
-            }
-            //foreach (DataRow row in table.Rows)
-            //{
-            //databasadagi doktorlar soniga qarab uqiydi
-            //}
-
-            dataGridView1.DataSource = table;
+            ShowDatagridForDoctors();
         }
 
         public void ShowDatagridForDoctors()
@@ -86,25 +57,24 @@ namespace WInforms.DoctorsPanel
             table.Columns.Add("Room", typeof(int));
             table.Columns.Add("Graduate", typeof(int));
 
-            var docotrs = _doctorService.GetAllDoctors(Parent._registrationUserControl.LastPersons.Peek());
+            var medservices = _doctorService.GetMedservices(Parent._clinikList.chooseClinikId);
 
-            foreach(var item in  docotrs)
+            foreach (var item in medservices)
             {
-                table.Rows.Add(item.Id, item.DoctorName, _doctorService.GetMedservices(item.Id),
-                    Convert.ToString((item.StartTime, item.EndTime)), "Du .. Ju", item.FloorPlace, item.RoomPlace, item.Experience);
+                foreach (var item2 in item.Doctors)
+                {
+                    table.Rows.Add(item2.Id, item2.DoctorName, item.MedserviceName,
+                    Convert.ToString((item2.StartTime, item2.EndTime)), "Du .. Ju", item2.FloorPlace,
+                    item2.RoomPlace, item2.Experience);
+                }
             }
-            //var a = GetCliniks();
-            //if (GetCliniks() != null)
-            //{
-            //    foreach (var item in GetCliniks())
-            //    {
-            //        table.Rows.Add(item.Id, item.Fullname, item.Address, item.PhoneNumber, "");
-            //    }
-            //}
-
             dataGridView1.DataSource = table;
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Backend.ServiceLayer.SeeDoctors
             return a;
         }
 
-        public Medservice GetMedservices(int doctor_id)
+        public Medservice? GetMedservices(int doctor_id)
         {
             var findDoctor = _context.Doctors.FirstOrDefault(item => item.Id == doctor_id);
             var medservices = _context.Medservices.FirstOrDefault(item => item.Id == findDoctor.MedserviceId);

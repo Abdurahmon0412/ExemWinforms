@@ -94,6 +94,7 @@
             dataGridView1.RowTemplate.Height = 24;
             dataGridView1.Size = new Size(797, 402);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // DoctorsListWindow
             // 

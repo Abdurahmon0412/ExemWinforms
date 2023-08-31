@@ -43,5 +43,10 @@ namespace WInforms.Clinicas
         {
             Parent._priceUserControl.BringToFront();
         }
+
+        private void ServicesButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

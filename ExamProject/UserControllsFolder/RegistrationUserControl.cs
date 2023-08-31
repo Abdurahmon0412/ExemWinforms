@@ -80,11 +80,12 @@ namespace WInforms.UserControllsFolder
                 };
                 _accountService.AddPerson(person);
                 LastPersons.Push(_accountService.GetPersonId(login, password));
+                
                 LoginTextbox.Clear();
                 PasswordTextbox.Clear();
                 Firstnametextbox.Clear();
                 Lastnametextbox.Clear();
-                Parent._clinikList.BringToFront();
+                Parent._checkClinik.BringToFront();
             }
         }
 

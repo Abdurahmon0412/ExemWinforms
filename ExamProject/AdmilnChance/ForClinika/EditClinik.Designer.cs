@@ -34,6 +34,7 @@
             EditPhoneNumberLabel = new Label();
             ChangeName = new TextBox();
             dataGridView1 = new DataGridView();
+            CancelButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -63,10 +64,10 @@
             // 
             OKButton.BackColor = Color.Lime;
             OKButton.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            OKButton.Location = new Point(26, 419);
+            OKButton.Location = new Point(3, 457);
             OKButton.Margin = new Padding(3, 4, 3, 4);
             OKButton.Name = "OKButton";
-            OKButton.Size = new Size(102, 99);
+            OKButton.Size = new Size(102, 68);
             OKButton.TabIndex = 6;
             OKButton.Text = "OK";
             OKButton.UseVisualStyleBackColor = false;
@@ -106,11 +107,25 @@
             dataGridView1.TabIndex = 9;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // CancelButton
+            // 
+            CancelButton.BackColor = Color.Lime;
+            CancelButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CancelButton.Location = new Point(113, 457);
+            CancelButton.Margin = new Padding(3, 4, 3, 4);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(102, 68);
+            CancelButton.TabIndex = 10;
+            CancelButton.Text = "Cansel";
+            CancelButton.UseVisualStyleBackColor = false;
+            CancelButton.Click += CancelButton_Click;
+            // 
             // EditClinik
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonShadow;
+            Controls.Add(CancelButton);
             Controls.Add(dataGridView1);
             Controls.Add(ChangeName);
             Controls.Add(EditPhoneNumberLabel);
@@ -134,5 +149,6 @@
         private Label EditPhoneNumberLabel;
         private TextBox ChangeName;
         private DataGridView dataGridView1;
+        private Button CancelButton;
     }
 }
