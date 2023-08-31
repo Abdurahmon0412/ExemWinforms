@@ -38,9 +38,10 @@
             EditEndTime = new Label();
             textBox2 = new TextBox();
             Editroom = new Label();
-            ConfirmButton = new Button();
             EditLavelText = new TextBox();
             EditLavel = new Label();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // ChangeName
@@ -67,10 +68,10 @@
             // 
             OKButton.BackColor = Color.Lime;
             OKButton.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            OKButton.Location = new Point(661, 422);
+            OKButton.Location = new Point(443, 476);
             OKButton.Margin = new Padding(3, 4, 3, 4);
             OKButton.Name = "OKButton";
-            OKButton.Size = new Size(102, 99);
+            OKButton.Size = new Size(102, 35);
             OKButton.TabIndex = 13;
             OKButton.Text = "OK";
             OKButton.UseVisualStyleBackColor = false;
@@ -80,10 +81,10 @@
             // 
             ExitButton.BackColor = Color.Lime;
             ExitButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ExitButton.Location = new Point(526, 422);
+            ExitButton.Location = new Point(288, 473);
             ExitButton.Margin = new Padding(3, 4, 3, 4);
             ExitButton.Name = "ExitButton";
-            ExitButton.Size = new Size(102, 99);
+            ExitButton.Size = new Size(102, 35);
             ExitButton.TabIndex = 11;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = false;
@@ -151,22 +152,10 @@
             Editroom.Text = "Edit Room";
             Editroom.Click += Editroom_Click;
             // 
-            // ConfirmButton
-            // 
-            ConfirmButton.BackColor = Color.Lime;
-            ConfirmButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ConfirmButton.Location = new Point(383, 428);
-            ConfirmButton.Margin = new Padding(3, 4, 3, 4);
-            ConfirmButton.Name = "ConfirmButton";
-            ConfirmButton.Size = new Size(102, 89);
-            ConfirmButton.TabIndex = 20;
-            ConfirmButton.Text = "Confirm";
-            ConfirmButton.UseVisualStyleBackColor = false;
-            // 
             // EditLavelText
             // 
             EditLavelText.BackColor = Color.FromArgb(192, 255, 192);
-            EditLavelText.Location = new Point(64, 476);
+            EditLavelText.Location = new Point(64, 453);
             EditLavelText.Margin = new Padding(3, 4, 3, 4);
             EditLavelText.Multiline = true;
             EditLavelText.Name = "EditLavelText";
@@ -177,19 +166,30 @@
             // 
             EditLavel.AutoSize = true;
             EditLavel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            EditLavel.Location = new Point(70, 441);
+            EditLavel.Location = new Point(64, 424);
             EditLavel.Name = "EditLavel";
             EditLavel.Size = new Size(97, 25);
             EditLavel.TabIndex = 23;
             EditLavel.Text = "Edit Lavel";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(252, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(548, 466);
+            dataGridView1.TabIndex = 24;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // EditDoctor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(EditLavel);
             Controls.Add(EditLavelText);
-            Controls.Add(ConfirmButton);
             Controls.Add(Editroom);
             Controls.Add(textBox2);
             Controls.Add(EditEndTime);
@@ -203,6 +203,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "EditDoctor";
             Size = new Size(803, 547);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -219,8 +220,8 @@
         private Label EditEndTime;
         private TextBox textBox2;
         private Label Editroom;
-        private Button ConfirmButton;
         private TextBox EditLavelText;
         private Label EditLavel;
+        private DataGridView dataGridView1;
     }
 }

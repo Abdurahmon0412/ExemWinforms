@@ -15,6 +15,14 @@ namespace Backend.ServiceLayer.MedServiceServices
         {
             _context = efCoreContext;
         }
+
+        public List<Medservice> GetDoctors(int medserviceId)
+        {
+            var medService = _context.Medservices.Include(a => a.Doctors)
+                .Where(item => item.Id == medserviceId).ToList();
+            return medService;
+        }
+
         public List<Medservice> GetMedservices(int clinikId)
         {
             var medServices = _context.Medservices.Include(a => a.Doctors).Where(item => 

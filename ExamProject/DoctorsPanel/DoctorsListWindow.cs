@@ -42,6 +42,10 @@ namespace WInforms.DoctorsPanel
         {
             ShowDatagridForDoctors();
         }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowDatagridForDoctors();
+        }
 
         public void ShowDatagridForDoctors()
         {
@@ -72,9 +76,5 @@ namespace WInforms.DoctorsPanel
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

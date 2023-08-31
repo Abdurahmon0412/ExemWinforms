@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="DataLayer\Scripts\" />
     <Folder Include="Enums\" />
+    <Folder Include="ServiceLayer\DoctorsServiceForAdmin\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -54,8 +54,8 @@ namespace ExamProject
             _checkClinikListForAdmin = new CheckClinikListForAdmin(this);
             _editClinik = new EditClinik(this, _clinikManagement);
             _addClinik = new AddClinika(this, _clinikManagement);
-            _doctorTypesforAdmin = new DoctorTypesforAdmin(this);
-            _doctorListForAdmin = new DoctorListForAdmin(this);
+            _doctorTypesforAdmin = new DoctorTypesforAdmin(this, _medService);
+            _doctorListForAdmin = new DoctorListForAdmin(this, _medService);
             _editDoctor = new EditDoctor(this);
             _addDoctor = new AddDoctor(this);
             _typesService = new TypesService(this);

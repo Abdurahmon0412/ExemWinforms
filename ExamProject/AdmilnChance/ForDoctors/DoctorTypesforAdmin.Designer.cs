@@ -35,7 +35,9 @@
             label1 = new Label();
             DearchBox = new TextBox();
             Confirm = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Exit
@@ -61,6 +63,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
@@ -70,8 +73,9 @@
             // DearchBox
             // 
             resources.ApplyResources(DearchBox, "DearchBox");
-            DearchBox.BackColor = SystemColors.HighlightText;
+            DearchBox.BackColor = Color.FromArgb(255, 224, 192);
             DearchBox.Name = "DearchBox";
+            DearchBox.TextChanged += DearchBox_TextChanged;
             // 
             // Confirm
             // 
@@ -82,11 +86,19 @@
             Confirm.UseVisualStyleBackColor = false;
             Confirm.Click += Confirm_Click;
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Image = ExamProject.Properties.Resources.ClinikPicture;
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
+            // 
             // DoctorTypesforAdmin
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
+            Controls.Add(pictureBox1);
             Controls.Add(Confirm);
             Controls.Add(DearchBox);
             Controls.Add(label1);
@@ -96,6 +108,7 @@
             Name = "DoctorTypesforAdmin";
             Load += DoctorTypesforAdmin_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,5 +120,6 @@
         private Label label1;
         private TextBox DearchBox;
         private Button Confirm;
+        private PictureBox pictureBox1;
     }
 }

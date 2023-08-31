@@ -1,4 +1,6 @@
-﻿using ExamProject;
+﻿using Backend;
+using Backend.ServiceLayer.MedServiceServices;
+using ExamProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +16,14 @@ namespace WInforms.AdmilnChance.ForDoctors
     public partial class DoctorListForAdmin : UserControl
     {
         Form1 Parent;
-        public DoctorListForAdmin(Form1 parent)
+        private IMedService _service;
+        public DoctorListForAdmin(Form1 parent, IMedService service)
         {
             InitializeComponent();
             Parent = parent;
+            _service = service;
+            ShowDatagridForDoctors();
+
         }
 
         private void DeleteCLinikButton_Click(object sender, EventArgs e)
@@ -43,6 +49,40 @@ namespace WInforms.AdmilnChance.ForDoctors
         private void Back_Click(object sender, EventArgs e)
         {
             Parent._doctorTypesforAdmin.BringToFront();
+        }
+
+        private void ClinikListDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void ShowDatagridForDoctors()
+        {
+
+
+            DataTable table = new DataTable();
+            table.Columns.Add("Id", typeof(int));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Spetificik", typeof(Medservice));
+            table.Columns.Add("Start/End time", typeof(string));
+            table.Columns.Add("WorkDays", typeof(string));
+            table.Columns.Add("Floor", typeof(int));
+            table.Columns.Add("Room", typeof(int));
+            table.Columns.Add("Graduate", typeof(int));
+
+            var medservices = _service.GetDoctors(Parent._doctorTypesforAdmin.medServiceID);
+
+            foreach (var item in medservices)
+            {
+                foreach (var item2 in item.Doctors)
+                {
+                    table.Rows.Add(item2.Id, item2.DoctorName, item.MedserviceName,
+                    Convert.ToString((item2.StartTime, item2.EndTime)), "Du .. Ju", item2.FloorPlace,
+                    item2.RoomPlace, item2.Experience);
+                }
+            }
+            ClinikListDataGrid.DataSource = table;
+
         }
     }
 }

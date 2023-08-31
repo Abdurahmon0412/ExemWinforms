@@ -45,5 +45,10 @@ namespace WInforms.AdmilnChance.ForDoctors
             Parent._checkClinikListForAdmin.BringToFront();
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
