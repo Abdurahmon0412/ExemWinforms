@@ -99,10 +99,6 @@ namespace WInforms.AdmilnChance
 
         }
 
-
-
-
-
         private void ChangeCallSenter_TextChanged(object sender, EventArgs e)
         {
             _newClinik.PhoneNumber = ChangeCallSenter.Text;
@@ -112,17 +108,9 @@ namespace WInforms.AdmilnChance
             _newClinik.Fullname = ChangeName.Text;
         }
         //bu yoqi kerak emas
-        private void EditPhoneNumberLabel_Click(object sender, EventArgs e)
-        {
+        private void EditPhoneNumberLabel_Click(object sender, EventArgs e) { }
 
-        }
-
-
-
-        private void EditNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void EditNameLabel_Click(object sender, EventArgs e) { }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {

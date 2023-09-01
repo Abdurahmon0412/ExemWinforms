@@ -27,8 +27,9 @@ namespace Backend.ServiceLayer.ClinikManagmetService
             {
                 return false;
             }
-            _context.Clinikass.Remove(result);
-            _context.Clinikass.Add(clinika);
+            //_context.Clinikass.Update(clinika);
+            //_context.Clinikass.Remove(result);
+            //_context.Clinikass.Add(clinika);
             _context.SaveChanges();
             return true;
         }

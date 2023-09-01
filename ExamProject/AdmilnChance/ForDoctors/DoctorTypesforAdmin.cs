@@ -35,7 +35,11 @@ namespace WInforms.AdmilnChance.ForDoctors
             if (medServiceID == 0)
                 MessageBox.Show("Iltimos biror Xizmat turini tanlang!");
             else
-            Parent._doctorListForAdmin.BringToFront();
+            {
+                Parent._doctorListForAdmin.ShowDatagridForDoctors();
+                Parent._doctorListForAdmin.BringToFront();
+            }
+
         }
 
         private void Exit_Click(object sender, EventArgs e)

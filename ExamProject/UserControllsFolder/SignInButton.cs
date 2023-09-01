@@ -33,6 +33,7 @@ namespace WInforms.UserControllsFolder
             if (findperson != null && findperson.RoleId == 1)
             {
                 TextBoxChanged();
+                Parent._registrationUserControl.LastPersons.Push(findperson.Id);
                 Parent._checkClinikListForAdmin.BringToFront();
             }
             else if (findperson != null && findperson.RoleId == 2)

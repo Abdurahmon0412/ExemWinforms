@@ -12,7 +12,7 @@ namespace Backend.DataLayer
     {
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql(connectionString: "Server=localhost;Port=5432;Username=postgres;host=localhost;database=ClinicService;password=postgres;");
+        => optionsBuilder.UseNpgsql(connectionString: "Server=localhost;Port=5432;Username=postgres;host=localhost;database=ClinicService;password=postgres;Include Error Detail=true;");
 
         public DbSet<Person> People { get; set; }
         public DbSet<Clinika> Clinikass { get; set; }

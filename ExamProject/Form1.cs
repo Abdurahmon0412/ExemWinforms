@@ -1,6 +1,7 @@
 using Backend.DataLayer;
 using Backend.ServiceLayer.AccountService;
 using Backend.ServiceLayer.ClinikManagmetService;
+using Backend.ServiceLayer.DoctorsServiceForAdmin;
 using Backend.ServiceLayer.MedServiceServices;
 using Backend.ServiceLayer.SeeDoctors;
 using WInforms.AdmilnChance;
@@ -22,6 +23,7 @@ namespace ExamProject
         ICLinikManagement _clinikManagement = new ClinikManagement(_context);
         IDoctorService _doctorservice = new DoctorService(_context);
         IMedService _medService = new MedService(_context);
+        IDoctorServiceForAdmin _doctorServiceForAdmin = new DoctorServiceForAdmin(_context);
 
         public ClinikList _clinikList;
         public EnterORLoginUserControl _enterorLoginUserControl;
@@ -56,8 +58,8 @@ namespace ExamProject
             _addClinik = new AddClinika(this, _clinikManagement);
             _doctorTypesforAdmin = new DoctorTypesforAdmin(this, _medService);
             _doctorListForAdmin = new DoctorListForAdmin(this, _medService);
-            _editDoctor = new EditDoctor(this);
-            _addDoctor = new AddDoctor(this);
+            _editDoctor = new EditDoctor(this, _doctorServiceForAdmin,_medService);
+            _addDoctor = new AddDoctor(this , _doctorServiceForAdmin);
             _typesService = new TypesService(this);
             _addService = new AddService(this);
             _editService = new EditService(this);

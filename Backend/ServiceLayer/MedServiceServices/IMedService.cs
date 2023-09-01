@@ -10,6 +10,8 @@ namespace Backend.ServiceLayer.MedServiceServices
     {
         List<Medservice> GetMedservices(int clinikId);
         List<Medservice> GetMedservices();
-        List<Medservice> GetDoctors(int  medserviceId);
+        List<Doctor> GetDoctors(int  medserviceId);
+        string GetMedserviceName(int medserviceId);
+        bool DeleteDoctor(int doctorId);
     }
 }

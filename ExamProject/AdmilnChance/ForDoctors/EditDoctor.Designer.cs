@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ChangeName = new TextBox();
+            EditStartTimetext = new TextBox();
             EditFloor = new Label();
             OKButton = new Button();
             ExitButton = new Button();
@@ -36,7 +36,7 @@
             EditStartTime = new Label();
             EditEndTimeText = new TextBox();
             EditEndTime = new Label();
-            textBox2 = new TextBox();
+            EditRoomText = new TextBox();
             Editroom = new Label();
             EditLavelText = new TextBox();
             EditLavel = new Label();
@@ -44,15 +44,15 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // ChangeName
+            // EditStartTimetext
             // 
-            ChangeName.BackColor = Color.FromArgb(192, 255, 192);
-            ChangeName.Location = new Point(64, 54);
-            ChangeName.Margin = new Padding(3, 4, 3, 4);
-            ChangeName.Multiline = true;
-            ChangeName.Name = "ChangeName";
-            ChangeName.Size = new Size(182, 45);
-            ChangeName.TabIndex = 15;
+            EditStartTimetext.BackColor = Color.FromArgb(192, 255, 192);
+            EditStartTimetext.Location = new Point(64, 54);
+            EditStartTimetext.Margin = new Padding(3, 4, 3, 4);
+            EditStartTimetext.Multiline = true;
+            EditStartTimetext.Name = "EditStartTimetext";
+            EditStartTimetext.Size = new Size(182, 45);
+            EditStartTimetext.TabIndex = 15;
             // 
             // EditFloor
             // 
@@ -130,16 +130,16 @@
             EditEndTime.TabIndex = 17;
             EditEndTime.Text = "Edit End time";
             // 
-            // textBox2
+            // EditRoomText
             // 
-            textBox2.BackColor = Color.FromArgb(128, 255, 128);
-            textBox2.Location = new Point(64, 375);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(182, 45);
-            textBox2.TabIndex = 18;
-            textBox2.TextChanged += textBox2_TextChanged;
+            EditRoomText.BackColor = Color.FromArgb(128, 255, 128);
+            EditRoomText.Location = new Point(59, 360);
+            EditRoomText.Margin = new Padding(3, 4, 3, 4);
+            EditRoomText.Multiline = true;
+            EditRoomText.Name = "EditRoomText";
+            EditRoomText.Size = new Size(182, 45);
+            EditRoomText.TabIndex = 18;
+            EditRoomText.TextChanged += textBox2_TextChanged;
             // 
             // Editroom
             // 
@@ -191,10 +191,10 @@
             Controls.Add(EditLavel);
             Controls.Add(EditLavelText);
             Controls.Add(Editroom);
-            Controls.Add(textBox2);
+            Controls.Add(EditRoomText);
             Controls.Add(EditEndTime);
             Controls.Add(EditEndTimeText);
-            Controls.Add(ChangeName);
+            Controls.Add(EditStartTimetext);
             Controls.Add(EditFloor);
             Controls.Add(OKButton);
             Controls.Add(ExitButton);
@@ -210,7 +210,7 @@
 
         #endregion
 
-        private TextBox ChangeName;
+        private TextBox EditStartTimetext;
         private Label EditFloor;
         private Button OKButton;
         private Button ExitButton;
@@ -218,7 +218,7 @@
         private Label EditStartTime;
         private TextBox EditEndTimeText;
         private Label EditEndTime;
-        private TextBox textBox2;
+        private TextBox EditRoomText;
         private Label Editroom;
         private TextBox EditLavelText;
         private Label EditLavel;

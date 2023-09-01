@@ -30,30 +30,28 @@
         {
             OKButton = new Button();
             AddButton = new Button();
-            PhonenumberText = new TextBox();
-            AddressTextBoxs = new TextBox();
+            EndTimeText = new TextBox();
+            StartTimetext = new TextBox();
             NameTextBox = new TextBox();
             EndTime = new Label();
             Starttime = new Label();
             NameLabel = new Label();
-            textBox1 = new TextBox();
+            DoctorRoom = new TextBox();
             EnterRoom = new Label();
-            textBox2 = new TextBox();
+            DoctorFloorText = new TextBox();
             DoctorFloor = new Label();
-            textBox3 = new TextBox();
+            DoctorLavelText = new TextBox();
             DoctorLavel = new Label();
-            comboBox1 = new ComboBox();
-            ChooseDoctorsClinika = new Label();
             SuspendLayout();
             // 
             // OKButton
             // 
             OKButton.BackColor = Color.FromArgb(0, 192, 0);
             OKButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            OKButton.Location = new Point(400, 478);
+            OKButton.Location = new Point(406, 459);
             OKButton.Margin = new Padding(3, 4, 3, 4);
             OKButton.Name = "OKButton";
-            OKButton.Size = new Size(75, 71);
+            OKButton.Size = new Size(75, 51);
             OKButton.TabIndex = 17;
             OKButton.Text = "OK";
             OKButton.UseVisualStyleBackColor = false;
@@ -64,33 +62,34 @@
             AddButton.BackColor = Color.Blue;
             AddButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             AddButton.ForeColor = SystemColors.ButtonHighlight;
-            AddButton.Location = new Point(117, 478);
+            AddButton.Location = new Point(207, 459);
             AddButton.Margin = new Padding(3, 4, 3, 4);
             AddButton.Name = "AddButton";
-            AddButton.Size = new Size(75, 71);
+            AddButton.Size = new Size(75, 51);
             AddButton.TabIndex = 16;
             AddButton.Text = "Add";
             AddButton.UseVisualStyleBackColor = false;
+            AddButton.Click += AddButton_Click;
             // 
-            // PhonenumberText
+            // EndTimeText
             // 
-            PhonenumberText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            PhonenumberText.Location = new Point(196, 182);
-            PhonenumberText.Margin = new Padding(3, 4, 3, 4);
-            PhonenumberText.Multiline = true;
-            PhonenumberText.Name = "PhonenumberText";
-            PhonenumberText.Size = new Size(379, 42);
-            PhonenumberText.TabIndex = 15;
+            EndTimeText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            EndTimeText.Location = new Point(196, 182);
+            EndTimeText.Margin = new Padding(3, 4, 3, 4);
+            EndTimeText.Multiline = true;
+            EndTimeText.Name = "EndTimeText";
+            EndTimeText.Size = new Size(379, 42);
+            EndTimeText.TabIndex = 15;
             // 
-            // AddressTextBoxs
+            // StartTimetext
             // 
-            AddressTextBoxs.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AddressTextBoxs.Location = new Point(196, 102);
-            AddressTextBoxs.Margin = new Padding(3, 4, 3, 4);
-            AddressTextBoxs.Multiline = true;
-            AddressTextBoxs.Name = "AddressTextBoxs";
-            AddressTextBoxs.Size = new Size(379, 42);
-            AddressTextBoxs.TabIndex = 14;
+            StartTimetext.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            StartTimetext.Location = new Point(196, 102);
+            StartTimetext.Margin = new Padding(3, 4, 3, 4);
+            StartTimetext.Multiline = true;
+            StartTimetext.Name = "StartTimetext";
+            StartTimetext.Size = new Size(379, 42);
+            StartTimetext.TabIndex = 14;
             // 
             // NameTextBox
             // 
@@ -132,15 +131,15 @@
             NameLabel.TabIndex = 10;
             NameLabel.Text = "Enter Doctor Name";
             // 
-            // textBox1
+            // DoctorRoom
             // 
-            textBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(196, 246);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(379, 42);
-            textBox1.TabIndex = 19;
+            DoctorRoom.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DoctorRoom.Location = new Point(196, 246);
+            DoctorRoom.Margin = new Padding(3, 4, 3, 4);
+            DoctorRoom.Multiline = true;
+            DoctorRoom.Name = "DoctorRoom";
+            DoctorRoom.Size = new Size(379, 42);
+            DoctorRoom.TabIndex = 19;
             // 
             // EnterRoom
             // 
@@ -152,15 +151,15 @@
             EnterRoom.TabIndex = 18;
             EnterRoom.Text = "Enter Doctor room";
             // 
-            // textBox2
+            // DoctorFloorText
             // 
-            textBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(196, 321);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(379, 42);
-            textBox2.TabIndex = 21;
+            DoctorFloorText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DoctorFloorText.Location = new Point(196, 321);
+            DoctorFloorText.Margin = new Padding(3, 4, 3, 4);
+            DoctorFloorText.Multiline = true;
+            DoctorFloorText.Name = "DoctorFloorText";
+            DoctorFloorText.Size = new Size(379, 42);
+            DoctorFloorText.TabIndex = 21;
             // 
             // DoctorFloor
             // 
@@ -172,15 +171,15 @@
             DoctorFloor.TabIndex = 20;
             DoctorFloor.Text = "Enter Doctor floor";
             // 
-            // textBox3
+            // DoctorLavelText
             // 
-            textBox3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(196, 409);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(379, 42);
-            textBox3.TabIndex = 23;
+            DoctorLavelText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DoctorLavelText.Location = new Point(196, 409);
+            DoctorLavelText.Margin = new Padding(3, 4, 3, 4);
+            DoctorLavelText.Multiline = true;
+            DoctorLavelText.Name = "DoctorLavelText";
+            DoctorLavelText.Size = new Size(379, 42);
+            DoctorLavelText.TabIndex = 23;
             // 
             // DoctorLavel
             // 
@@ -192,42 +191,21 @@
             DoctorLavel.TabIndex = 22;
             DoctorLavel.Text = "Enter Doctor Lavel ";
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(603, 102);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(175, 28);
-            comboBox1.TabIndex = 24;
-            // 
-            // ChooseDoctorsClinika
-            // 
-            ChooseDoctorsClinika.AutoSize = true;
-            ChooseDoctorsClinika.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ChooseDoctorsClinika.Location = new Point(590, 50);
-            ChooseDoctorsClinika.Name = "ChooseDoctorsClinika";
-            ChooseDoctorsClinika.Size = new Size(210, 25);
-            ChooseDoctorsClinika.TabIndex = 25;
-            ChooseDoctorsClinika.Text = "Choose Doctor's Clinik";
-            // 
             // AddDoctor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            Controls.Add(ChooseDoctorsClinika);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox3);
+            Controls.Add(DoctorLavelText);
             Controls.Add(DoctorLavel);
-            Controls.Add(textBox2);
+            Controls.Add(DoctorFloorText);
             Controls.Add(DoctorFloor);
-            Controls.Add(textBox1);
+            Controls.Add(DoctorRoom);
             Controls.Add(EnterRoom);
             Controls.Add(OKButton);
             Controls.Add(AddButton);
-            Controls.Add(PhonenumberText);
-            Controls.Add(AddressTextBoxs);
+            Controls.Add(EndTimeText);
+            Controls.Add(StartTimetext);
             Controls.Add(NameTextBox);
             Controls.Add(EndTime);
             Controls.Add(Starttime);
@@ -243,19 +221,17 @@
 
         private Button OKButton;
         private Button AddButton;
-        private TextBox PhonenumberText;
-        private TextBox AddressTextBoxs;
+        private TextBox EndTimeText;
+        private TextBox StartTimetext;
         private TextBox NameTextBox;
         private Label EndTime;
         private Label Starttime;
         private Label NameLabel;
-        private TextBox textBox1;
+        private TextBox DoctorRoom;
         private Label EnterRoom;
-        private TextBox textBox2;
+        private TextBox DoctorFloorText;
         private Label DoctorFloor;
-        private TextBox textBox3;
+        private TextBox DoctorLavelText;
         private Label DoctorLavel;
-        private ComboBox comboBox1;
-        private Label ChooseDoctorsClinika;
     }
 }

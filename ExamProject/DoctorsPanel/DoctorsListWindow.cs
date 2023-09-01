@@ -54,7 +54,7 @@ namespace WInforms.DoctorsPanel
             DataTable table = new DataTable();
             table.Columns.Add("Id", typeof(int));
             table.Columns.Add("Name", typeof(string));
-            table.Columns.Add("Spetificik", typeof(Medservice));
+            table.Columns.Add("Spetificik", typeof(string));
             table.Columns.Add("Start/End time", typeof(string));
             table.Columns.Add("WorkDays", typeof(string));
             table.Columns.Add("Floor", typeof(int));
