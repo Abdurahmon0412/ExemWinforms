@@ -5,7 +5,12 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "Backend\Backend.csproj", "{BCAFBBC8-C700-4723-8D81-EB5E3A68978F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamProject", "ExamProject\ExamProject.csproj", "{DB6D0342-B030-4963-9A04-688186599659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamProject", "ExamProject\ExamProject.csproj", "{DB6D0342-B030-4963-9A04-688186599659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project mohiyati", "Project mohiyati", "{1AE339F3-0FF1-4F9B-8617-848AE4A9F420}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
