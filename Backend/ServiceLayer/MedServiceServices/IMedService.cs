@@ -13,5 +13,10 @@ namespace Backend.ServiceLayer.MedServiceServices
         List<Doctor> GetDoctors(int  medserviceId);
         string GetMedserviceName(int medserviceId);
         bool DeleteDoctor(int doctorId);
+
+        bool DeleteMedservice(int personId, int medServiceId);
+        bool EditMedServie(Medservice medService);
+        bool AddMedservice(Medservice medservice);
+
     }
 }

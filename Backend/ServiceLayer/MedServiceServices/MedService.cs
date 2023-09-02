@@ -54,5 +54,44 @@ namespace Backend.ServiceLayer.MedServiceServices
                     return true;
                 }
         }
+
+        public bool DeleteMedservice(int personId, int medServiceId)
+        {
+            var person = _context.People.FirstOrDefault(per =>  per.Id == personId);
+            var result = _context.Medservices.FirstOrDefault(med =>
+            med.Id == medServiceId);// && med.ClinikaId == person.ClinikaId);
+            if (result == null) return false;
+            _context.Medservices.Remove(result);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public bool EditMedServie(Medservice medService)
+        {
+            var updateMedService = _context.Medservices.FirstOrDefault(med => med.Id == medService.Id);
+                if (updateMedService != null)
+                {
+                    updateMedService.ServicePrice = medService.ServicePrice;
+                    _context.SaveChanges(true);
+                    return true;
+                }
+                return false;
+        }
+
+        public bool AddMedservice(Medservice medservice)
+        {
+            try
+            {
+                _context.Medservices.Add(medservice);
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace WInforms.Coasts
 {
     public partial class PricesUserControl : UserControl
     {
-        public Form1 Parent;
+        public Form1 Parent ;
         private IMedService _service;
         public PricesUserControl(Form1 parent, IMedService service)
         {

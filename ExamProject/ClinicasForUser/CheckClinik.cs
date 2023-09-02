@@ -46,7 +46,7 @@ namespace WInforms.Clinicas
 
         private void ServicesButton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Ustoz bu yerini hali qilmadim");
         }
     }
 }

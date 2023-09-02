@@ -31,7 +31,7 @@
             ServiceName = new Label();
             AddServiceName = new TextBox();
             ServicePrice = new Label();
-            textBox1 = new TextBox();
+            PriceTextBox = new TextBox();
             AddButton = new Button();
             ExitButton = new Button();
             ChooseClinikCombo = new ComboBox();
@@ -68,15 +68,15 @@
             ServicePrice.TabIndex = 2;
             ServicePrice.Text = "Enter Price";
             // 
-            // textBox1
+            // PriceTextBox
             // 
-            textBox1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(204, 420);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 46);
-            textBox1.TabIndex = 6;
+            PriceTextBox.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            PriceTextBox.Location = new Point(204, 420);
+            PriceTextBox.Margin = new Padding(3, 4, 3, 4);
+            PriceTextBox.Multiline = true;
+            PriceTextBox.Name = "PriceTextBox";
+            PriceTextBox.Size = new Size(292, 46);
+            PriceTextBox.TabIndex = 6;
             // 
             // AddButton
             // 
@@ -112,6 +112,8 @@
             ChooseClinikCombo.Name = "ChooseClinikCombo";
             ChooseClinikCombo.Size = new Size(292, 28);
             ChooseClinikCombo.TabIndex = 10;
+            ChooseClinikCombo.SelectedIndexChanged += ChooseClinikCombo_SelectedIndexChanged;
+            ChooseClinikCombo.MouseDown += ChooseClinikCombo_MouseDown;
             // 
             // ChooseClinik
             // 
@@ -131,7 +133,7 @@
             Controls.Add(ChooseClinikCombo);
             Controls.Add(ExitButton);
             Controls.Add(AddButton);
-            Controls.Add(textBox1);
+            Controls.Add(PriceTextBox);
             Controls.Add(ServicePrice);
             Controls.Add(AddServiceName);
             Controls.Add(ServiceName);
@@ -147,7 +149,7 @@
         private Label ServiceName;
         private TextBox AddServiceName;
         private Label ServicePrice;
-        private TextBox textBox1;
+        private TextBox PriceTextBox;
         private Button AddButton;
         private Button ExitButton;
         private ComboBox ChooseClinikCombo;

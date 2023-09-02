@@ -43,6 +43,10 @@ namespace WInforms.UserControllsFolder
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            LoginTextbox.Clear();
+            PasswordTextbox.Clear();
+            Firstnametextbox.Clear();
+            Lastnametextbox.Clear();
             Parent._enterorLoginUserControl.BringToFront();
         }
 
@@ -80,12 +84,12 @@ namespace WInforms.UserControllsFolder
                 };
                 _accountService.AddPerson(person);
                 LastPersons.Push(_accountService.GetPersonId(login, password));
-                
+
                 LoginTextbox.Clear();
                 PasswordTextbox.Clear();
                 Firstnametextbox.Clear();
                 Lastnametextbox.Clear();
-                Parent._checkClinik.BringToFront();
+                Parent._clinikList.BringToFront();
             }
         }
 

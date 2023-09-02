@@ -80,8 +80,9 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(711, 458);
+            dataGridView1.Size = new Size(711, 431);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             // 
             // AddButton
             // 
@@ -150,7 +151,7 @@
             Controls.Add(Search);
             Margin = new Padding(3, 4, 3, 4);
             Name = "TypesService";
-            Size = new Size(803, 547);
+            Size = new Size(803, 569);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

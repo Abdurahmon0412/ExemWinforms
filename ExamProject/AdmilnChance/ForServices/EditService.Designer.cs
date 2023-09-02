@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             ExitButton = new Button();
-            AddButton = new Button();
+            EditButton = new Button();
             ServicePrice = new Label();
             EditServicePrice = new TextBox();
             SuspendLayout();
@@ -47,18 +47,18 @@
             ExitButton.UseVisualStyleBackColor = false;
             ExitButton.Click += ExitButton_Click;
             // 
-            // AddButton
+            // EditButton
             // 
-            AddButton.BackColor = SystemColors.ActiveCaption;
-            AddButton.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            AddButton.Location = new Point(568, 428);
-            AddButton.Margin = new Padding(3, 4, 3, 4);
-            AddButton.Name = "AddButton";
-            AddButton.Size = new Size(75, 58);
-            AddButton.TabIndex = 12;
-            AddButton.Text = "Add";
-            AddButton.UseVisualStyleBackColor = false;
-            AddButton.Click += AddButton_Click;
+            EditButton.BackColor = SystemColors.ActiveCaption;
+            EditButton.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            EditButton.Location = new Point(568, 428);
+            EditButton.Margin = new Padding(3, 4, 3, 4);
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(75, 58);
+            EditButton.TabIndex = 12;
+            EditButton.Text = "Edit";
+            EditButton.UseVisualStyleBackColor = false;
+            EditButton.Click += AddButton_Click;
             // 
             // ServicePrice
             // 
@@ -72,6 +72,7 @@
             // 
             // EditServicePrice
             // 
+            EditServicePrice.BackColor = SystemColors.InactiveCaption;
             EditServicePrice.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             EditServicePrice.Location = new Point(246, 134);
             EditServicePrice.Margin = new Padding(3, 4, 3, 4);
@@ -87,7 +88,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(EditServicePrice);
             Controls.Add(ExitButton);
-            Controls.Add(AddButton);
+            Controls.Add(EditButton);
             Controls.Add(ServicePrice);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(3, 4, 3, 4);
@@ -101,7 +102,7 @@
         #endregion
 
         private Button ExitButton;
-        private Button AddButton;
+        private Button EditButton;
         private Label ServicePrice;
         private TextBox EditServicePrice;
     }

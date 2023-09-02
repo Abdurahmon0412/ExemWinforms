@@ -60,9 +60,9 @@ namespace ExamProject
             _doctorListForAdmin = new DoctorListForAdmin(this, _medService);
             _editDoctor = new EditDoctor(this, _doctorServiceForAdmin,_medService);
             _addDoctor = new AddDoctor(this , _doctorServiceForAdmin);
-            _typesService = new TypesService(this);
-            _addService = new AddService(this);
-            _editService = new EditService(this);
+            _typesService = new TypesService(this, _medService);
+            _addService = new AddService(this , _medService, _accountService);
+            _editService = new EditService(this, _medService);
 
 
             Controls.Add(_doctorTypesforAdmin);

@@ -73,8 +73,6 @@ namespace WInforms.DoctorsPanel
                 }
             }
             dataGridView1.DataSource = table;
-
         }
-
     }
 }
